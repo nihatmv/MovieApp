@@ -1,3 +1,8 @@
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
 .topbar {
   display: flex;
   height: 100px;
@@ -6,6 +11,7 @@
   margin-top: 130px;
 }
 .movie-name-input {
+  margin-top: 70px;
   width: 380px;
   height: 40px;
   border: 1px solid black;
@@ -26,4 +32,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.site-info-script {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  /* width: 100px; */
+}
+.movie-overview {
+  display: flex;
+}
+.movie-info {
+  margin-left: 30px;
+  width: 700px;
+}
+.span-1 {
+  color: rgb(255, 162, 0);
+  font-size: 22px;
 }

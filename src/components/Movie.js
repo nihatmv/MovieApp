@@ -38,6 +38,7 @@ function Movie() {
 
   return (
     <div className="main-div">
+      <p className="site-info-script">Details Behind Your Favorite Movies</p>
       <input
         type="text"
         placeholder="Type a movie..."
@@ -45,16 +46,32 @@ function Movie() {
         onChange={handleInputChange}
         className="movie-name-input"
       />
-      <p>Current input value: {inputValue}</p>
 
       {selectedMovie ? (
-        <div key={selectedMovie.id}>
+        <div key={selectedMovie.id} className="movie-overview">
           <img
             src={`https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}`}
             alt={selectedMovie.title}
             width="300px"
           />
-          <p>{selectedMovie.original_title}</p>
+          <div className="movie-info">
+            <p>
+              The name of the film is: {""}
+              <span className="span-1">{selectedMovie.original_title}</span>
+            </p>
+            <p>
+              Release Date is: {""}
+              <span className="span-1">{selectedMovie.release_date}</span>
+            </p>
+            <p>
+              Vote Average out of 10 is: {""}
+              <span className="span-1">{selectedMovie.vote_average}</span>
+            </p>
+            <p>
+              The overview of the film: {""}
+              <span className="span-1">{selectedMovie.overview}"</span>
+            </p>
+          </div>
         </div>
       ) : (
         <p>No movie found or type to search...</p> // Display message when no movie is found or input is empty
